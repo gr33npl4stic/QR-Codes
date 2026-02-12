@@ -131,7 +131,7 @@ body {
   transform: scale(1.05);
 }
 
-.theme-toggle:focus {
+.theme-toggle:focus-visible {
   outline: 2px solid var(--focus-color);
   outline-offset: 2px;
 }
@@ -187,7 +187,7 @@ body {
   color: var(--bg-primary);
 }
 
-.lang-btn:focus {
+.lang-btn:focus-visible {
   outline: 2px solid var(--focus-color);
   outline-offset: 2px;
 }
@@ -293,7 +293,7 @@ audio {
   background: var(--bg-secondary);
 }
 
-.accordion-button:focus {
+.accordion-button:focus-visible {
   outline: 2px solid var(--focus-color);
   outline-offset: -2px;
 }
