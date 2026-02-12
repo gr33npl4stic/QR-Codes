@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const htmlElement = document.documentElement;
 
     // Check localStorage for language preference
-    const savedLang = localStorage.getItem('exhibition-lang') || 'de';
+    const savedLang = localStorage.getItem('exhibition-lang')
+        || (navigator.language.startsWith('de') ? 'de' : 'en');
     
     function switchLanguage(lang) {
         if (lang === 'de') {
