@@ -40,6 +40,15 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Close all accordions when switching language
         closeAllAccordions();
+
+        // Announce language change to screen readers
+        var announce = document.getElementById('lang-announce');
+        if (announce) {
+            announce.textContent = lang === 'de' ? 'Sprache: Deutsch' : 'Language: English';
+        }
+
+        // Update theme toggle label for current language
+        updateThemeLabel();
     }
     
     // Set initial language
@@ -71,12 +80,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Theme Toggle Function (optional - can be triggered by button or automatically)
+    // Update theme toggle aria-label based on current state and language
+    function updateThemeLabel() {
+        var btn = document.getElementById('theme-toggle');
+        if (!btn) return;
+        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        var lang = localStorage.getItem('exhibition-lang') || 'de';
+        if (lang === 'de') {
+            btn.setAttribute('aria-label', isDark ? 'Zum hellen Modus wechseln' : 'Zum dunklen Modus wechseln');
+        } else {
+            btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+        }
+    }
+
+    // Theme Toggle Function
     function toggleTheme() {
         const currentTheme = document.documentElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('exhibition-theme', newTheme);
+        updateThemeLabel();
     }
     
     // Optional: Add theme toggle button listener if button exists
@@ -84,6 +107,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', toggleTheme);
     }
+
+    // Set initial theme label
+    updateThemeLabel();
     
     // Optional: Detect system preference on first visit
     // Uncomment if you want to use system preference by default
