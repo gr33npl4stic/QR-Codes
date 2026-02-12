@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station 1: Lorem Ipsum Dolor - Ausstellungsführer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+    
+    <!-- Theme Toggle -->
+    <button 
+        class="theme-toggle" 
+        id="theme-toggle"
+        aria-label="Theme umschalten">
+        <span class="theme-icon"></span>
+    </button>
+    
+    <!-- Language Toggle -->
+    <div class="language-toggle" role="group" aria-label="Sprachwahl">
+        <button 
+            class="lang-btn active" 
+            id="btn-de" 
+            aria-pressed="true"
+            aria-label="Deutsch auswählen">
+            DE
+        </button>
+        <button 
+            class="lang-btn" 
+            id="btn-en" 
+            aria-pressed="false"
+            aria-label="Switch to English">
+            EN
+        </button>
+    </div>
+    
+    <main class="container" id="main-content">
+        <!-- German Version -->
+        <div data-lang="de" lang="de" class="active-lang">
+            <h1 class="station-title">Station 1: Lorem Ipsum Dolor</h1>
+            
+            <!-- Audio Guide -->
+            <section class="audio-section" aria-labelledby="audio-label-de">
+                <span id="audio-label-de" class="audio-label">Audioguide</span>
+                <audio 
+                    controls 
+                    aria-describedby="audio-label-de"
+                    preload="metadata">
+                    <source src="audio/station1-de.mp3" type="audio/mpeg">
+                    Ihr Browser unterstützt das Audio-Element nicht.
+                </audio>
+            </section>
+            
+            <!-- Accordion: Wandtext -->
+            <details class="accordion-item">
+                <summary class="accordion-button">
+                    <span>Wandtext</span>
+                    <span class="accordion-icon" aria-hidden="true">▼</span>
+                </summary>
+                <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+            </details>
+            
+            <!-- Accordion: Wegbeschreibung (only in German) -->
+            <details class="accordion-item">
+                <summary class="accordion-button">
+                    <span>Wegbeschreibung</span>
+                    <span class="accordion-icon" aria-hidden="true">▼</span>
+                </summary>
+                <div class="accordion-content">
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                </div>
+            </details>
+        </div>
+        
+        <!-- English Version -->
+        <div data-lang="en" lang="en" aria-hidden="true">
+            <h1 class="station-title">Station 1: Lorem Ipsum Dolor</h1>
+            
+            <!-- Audio Guide -->
+            <section class="audio-section" aria-labelledby="audio-label-en">
+                <span id="audio-label-en" class="audio-label">Audio Guide</span>
+                <audio 
+                    controls 
+                    aria-describedby="audio-label-en"
+                    preload="metadata">
+                    <source src="audio/station1-en.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </section>
+            
+            <!-- Accordion: Wall Text -->
+            <details class="accordion-item">
+                <summary class="accordion-button">
+                    <span>Wall Text</span>
+                    <span class="accordion-icon" aria-hidden="true">▼</span>
+                </summary>
+                <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+            </details>
+            
+            <!-- No "Wegbeschreibung" in English version -->
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
