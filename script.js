@@ -112,14 +112,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set initial theme label
     updateThemeLabel();
     
-    // Optional: Detect system preference on first visit
-    // Uncomment if you want to use system preference by default
-    /*
+    // Detect system preference on first visit
     if (!localStorage.getItem('exhibition-theme')) {
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const initialTheme = prefersDark ? 'dark' : 'light';
         document.documentElement.setAttribute('data-theme', initialTheme);
         localStorage.setItem('exhibition-theme', initialTheme);
+        updateThemeLabel();
     }
-    */
 });
