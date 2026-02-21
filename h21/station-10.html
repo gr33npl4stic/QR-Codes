@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Station 10: Lorem Ipsum Dolor – Interaktiver Ausstellungsführer mit Audioguide, Wandtext und Wegbeschreibung. Verfügbar auf Deutsch und Englisch."
+    />
+    <title>Station 10: Lorem Ipsum Dolor - Ausstellungsführer</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <!-- Theme Toggle -->
+    <button
+      class="theme-toggle"
+      id="theme-toggle"
+      aria-label="Theme umschalten"
+    >
+      <span class="theme-icon"></span>
+    </button>
+
+    <!-- Language Toggle -->
+    <div class="language-toggle" role="group" aria-label="Sprachwahl">
+      <button
+        class="lang-btn active"
+        id="btn-de"
+        aria-pressed="true"
+        aria-label="Deutsch auswählen"
+      >
+        DE
+      </button>
+      <button
+        class="lang-btn"
+        id="btn-en"
+        aria-pressed="false"
+        aria-label="Switch to English"
+      >
+        EN
+      </button>
+    </div>
+
+    <div id="lang-announce" class="sr-only" aria-live="polite"></div>
+
+    <main class="container" id="main-content">
+      <!-- German Version -->
+      <div data-lang="de" lang="de" class="active-lang">
+        <h1 class="station-title">Station 10: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-de">
+          <span id="audio-label-de" class="audio-label">Audioguide</span>
+          <audio controls aria-describedby="audio-label-de" preload="metadata">
+            <source src="audio/station10-de.mp3" type="audio/mpeg" />
+            Ihr Browser unterstützt das Audio-Element nicht.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wandtext -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wandtext</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>Diagnostizierte Minderheit</h3>
+            <p>
+              Ob ein Zustand oder eine Form der Lebensführung als „normal“ oder
+              als „krank“ eingestuft wird, hängt von vielen Faktoren ab.
+              Besonders deutlich lässt sich das an einem Beispiel
+              nachvollziehen: nämlich dem Umgang mit sexueller Orientierung und
+              Geschlechtsidentität.
+            </p>
+            <p>
+              Homosexualität wurde in vielen Gesellschaften lange Zeit zunächst
+              als Sünde oder Verbrechen angesehen und später sogar als Krankheit
+              eingestuft. Heute gilt Vielfalt in vielen Bereichen längst als
+              selbstverständlich. Was Fragen der Geschlechtsidentität betrifft,
+              werden jedoch weiterhin öffentliche Debatten geführt. In den
+              vergangenen Jahren sind zudem gesellschaftspolitische Strömungen
+              zu verzeichnen, die darauf abzielen, die Akzeptanz sexueller
+              Diversität und verschiedener Geschlechtsidentitäten wieder
+              einzuschränken.
+            </p>
+          </div>
+        </details>
+
+        <!-- Accordion: Wegbeschreibung (only in German) -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wegbeschreibung</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <p>
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+              aut fugit, sed quia consequuntur magni dolores eos qui ratione
+              voluptatem sequi nesciunt.
+            </p>
+            <p>
+              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+              consectetur, adipisci velit, sed quia non numquam eius modi
+              tempora incidunt ut labore et dolore magnam aliquam quaerat
+              voluptatem.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <!-- English Version -->
+      <div data-lang="en" lang="en" aria-hidden="true">
+        <h1 class="station-title">Station 10: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-en">
+          <span id="audio-label-en" class="audio-label">Audio Guide</span>
+          <audio controls aria-describedby="audio-label-en" preload="metadata">
+            <source src="audio/station10-en.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wall Text -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wall Text</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>Diagnosed minority</h3>
+            <p>
+              Whether a condition or a way of life is considered “normal” or
+              “ill” depends on many factors. One example makes this especially
+              clear: how a society views sexual orientation and gender identity.
+            </p>
+            <p>
+              For a long time, many societies first regarded homosexuality as a
+              sin or a crime, and later even classified it as an illness.
+            </p>
+            <p>
+              Today, diversity is taken for granted in many areas, yet public
+              debates around gender identity continue. In recent years,
+              sociopolitical movements have emerged that aim to roll back
+              acceptance of sexual diversity and various gender identities.
+            </p>
+          </div>
+        </details>
+
+        <!-- No "Wegbeschreibung" in English version -->
+      </div>
+    </main>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

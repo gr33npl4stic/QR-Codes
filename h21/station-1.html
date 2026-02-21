@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Station 1: Lorem Ipsum Dolor – Interaktiver Ausstellungsführer mit Audioguide, Wandtext und Wegbeschreibung. Verfügbar auf Deutsch und Englisch."
+    />
+    <title>Station 1: Lorem Ipsum Dolor - Ausstellungsführer</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <!-- Theme Toggle -->
+    <button
+      class="theme-toggle"
+      id="theme-toggle"
+      aria-label="Theme umschalten"
+    >
+      <span class="theme-icon"></span>
+    </button>
+
+    <!-- Language Toggle -->
+    <div class="language-toggle" role="group" aria-label="Sprachwahl">
+      <button
+        class="lang-btn active"
+        id="btn-de"
+        aria-pressed="true"
+        aria-label="Deutsch auswählen"
+      >
+        DE
+      </button>
+      <button
+        class="lang-btn"
+        id="btn-en"
+        aria-pressed="false"
+        aria-label="Switch to English"
+      >
+        EN
+      </button>
+    </div>
+
+    <div id="lang-announce" class="sr-only" aria-live="polite"></div>
+
+    <main class="container" id="main-content">
+      <!-- German Version -->
+      <div data-lang="de" lang="de" class="active-lang">
+        <h1 class="station-title">Station 1: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-de">
+          <span id="audio-label-de" class="audio-label">Audioguide</span>
+          <audio controls aria-describedby="audio-label-de" preload="metadata">
+            <source src="audio/station1-de.mp3" type="audio/mpeg" />
+            Ihr Browser unterstützt das Audio-Element nicht.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wandtext -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wandtext</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>
+              Einleitung: Wenn die Welt Kopf steht. Mensch. Psyche. Gesundheit
+            </h3>
+            <p>
+              Dieses Gebäude beherbergt üblicherweise Direktion und Verwaltung
+              des Landesklinikums Mauer. Nun dient es der Niederösterreichischen
+              Landesausstellung 2026 als Ausstellungsort: Hier werden Einblicke
+              in die menschliche Psyche, in Krankheit im Allgemeinen und in
+              psychische Erkrankungen im Besonderen gegeben. Im Mittelpunkt
+              steht der Umgang mit psychischen Erkrankungen, der sich im Lauf
+              der Zeit stark gewandelt hat. Historische Objekte, Kunstwerke,
+              Fotografien, Texte und Dokumente zeigen, wie vielschichtig das
+              Thema ist. Ergänzt werden sie durch Aussagen von Betroffenen,
+              Angehörigen und medizinischem Personal.
+            </p>
+            <p>
+              Heute weiß man: Psychische Erkrankungen sind kein unwiderrufliches
+              Schicksal, sondern gut behandelbar. Ziel ist es, die Betroffenen
+              rasch wieder am sozialen Leben teilhaben zu lassen. Psychische
+              Gesundheit muss aber weit mehr sein – nämlich ein
+              gesamtgesellschaftliches Anliegen. Nur so kann es gelingen, dass
+              eine psychische Erkrankung kein Tabu mehr ist und Betroffene keine
+              Ausgrenzung erfahren.
+            </p>
+          </div>
+        </details>
+
+        <!-- Accordion: Wegbeschreibung (only in German) -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wegbeschreibung</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <p>
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+              aut fugit, sed quia consequuntur magni dolores eos qui ratione
+              voluptatem sequi nesciunt.
+            </p>
+            <p>
+              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+              consectetur, adipisci velit, sed quia non numquam eius modi
+              tempora incidunt ut labore et dolore magnam aliquam quaerat
+              voluptatem.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <!-- English Version -->
+      <div data-lang="en" lang="en" aria-hidden="true">
+        <h1 class="station-title">Station 1: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-en">
+          <span id="audio-label-en" class="audio-label">Audio Guide</span>
+          <audio controls aria-describedby="audio-label-en" preload="metadata">
+            <source src="audio/station1-en.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wall Text -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wall Text</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>
+              Introduction: When the World is Upside Down. Human. Psyche.
+              Health.
+            </h3>
+            <p>
+              This building usually houses the management and administration of
+              the Landesklinikum Mauer, a psychiatric clinic and general
+              hospital. For the 2026 Lower Austria State Exhibition, it takes on
+              a new role. Visitors gain insight into the human psyche, illness
+              in general, and mental illness in particular. The presentation
+              traces how ideas and approaches to mental illness have changed
+              over time. Historical objects, artworks, photographs, texts and
+              documents show the complexity of the subject, accompanied by
+              first-hand accounts from patients, relatives and healthcare staff.
+            </p>
+            <p>
+              Today we recognise that mental illness is not an irrevocable fate
+              and that effective treatment exists. The aim is to support those
+              affected so they can rejoin social life as soon as possible. But
+              mental health requires far more than medical care; it must be seen
+              as an issue that affects all of us. Only through shared
+              responsibility can society dismantle the taboos surrounding mental
+              illness and prevent exclusion.
+            </p>
+          </div>
+        </details>
+
+        <!-- No "Wegbeschreibung" in English version -->
+      </div>
+    </main>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

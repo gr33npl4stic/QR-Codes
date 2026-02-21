@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Station 12: Lorem Ipsum Dolor – Interaktiver Ausstellungsführer mit Audioguide, Wandtext und Wegbeschreibung. Verfügbar auf Deutsch und Englisch."
+    />
+    <title>Station 12: Lorem Ipsum Dolor - Ausstellungsführer</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <!-- Theme Toggle -->
+    <button
+      class="theme-toggle"
+      id="theme-toggle"
+      aria-label="Theme umschalten"
+    >
+      <span class="theme-icon"></span>
+    </button>
+
+    <!-- Language Toggle -->
+    <div class="language-toggle" role="group" aria-label="Sprachwahl">
+      <button
+        class="lang-btn active"
+        id="btn-de"
+        aria-pressed="true"
+        aria-label="Deutsch auswählen"
+      >
+        DE
+      </button>
+      <button
+        class="lang-btn"
+        id="btn-en"
+        aria-pressed="false"
+        aria-label="Switch to English"
+      >
+        EN
+      </button>
+    </div>
+
+    <div id="lang-announce" class="sr-only" aria-live="polite"></div>
+
+    <main class="container" id="main-content">
+      <!-- German Version -->
+      <div data-lang="de" lang="de" class="active-lang">
+        <h1 class="station-title">Station 12: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-de">
+          <span id="audio-label-de" class="audio-label">Audioguide</span>
+          <audio controls aria-describedby="audio-label-de" preload="metadata">
+            <source src="audio/station12-de.mp3" type="audio/mpeg" />
+            Ihr Browser unterstützt das Audio-Element nicht.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wandtext -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wandtext</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>Kapitel 3: Krankheit und Gesellschaft</h3>
+            <p>
+              Der gesellschaftliche Umgang mit Menschen, die psychisch erkrankt
+              sind, hat sich seit dem Ende des 18. Jahrhunderts immer wieder
+              verändert. Lange Zeit wurden sie nur untergebracht, nicht aber
+              behandelt, oder sie lebten am Rand der Gesellschaft. Im
+              Nationalsozialismus wurde Menschen mit Behinderungen oder
+              psychischen Erkrankungen das Recht auf Leben abgesprochen. In
+              anderen Zeiten kam man psychisch Erkrankten mit Mitgefühl,
+              Verständnis und Respekt entgegen. Dadurch ließen sich sowohl in
+              der sozialen Betreuung als auch in der Behandlung wichtige
+              Fortschritte erzielen.
+            </p>
+            <p>
+              Seit den Psychiatriereformen der 1970er-Jahre haben sich die
+              gesetzlichen Regeln für die Unterbringung und Versorgung von
+              Menschen in psychiatrischen Einrichtungen deutlich verbessert. Es
+              besteht ein klarer gesellschaftlicher Wille, die Inklusion und
+              Teilhabe von Erkrankten zu fördern und Stigmatisierungen
+              abzubauen.
+            </p>
+            <h3>Anstalten machen</h3>
+            <p>
+              Bis zum ausgehenden 18. Jahrhundert waren psychisch Erkrankte
+              meist in kirchlichen oder städtischen Armenhäusern untergebracht.
+              Manchmal fristeten sie gar in gefängnisähnlichen Einrichtungen mit
+              straffällig Gewordenen, Landstreichern oder als „unsittlich“
+              geltenden Personen ein elendes Dasein mit mangelhafter Versorgung.
+            </p>
+            <p>
+              Dann wurden speziell zur Versorgung psychisch Erkrankter eigene
+              Anstalten errichtet, die baulich ansprechend und aufwendig
+              gestaltet waren. Das bedeutete einen Fortschritt. Doch es fehlte
+              noch an Erkenntnissen über psychische Erkrankungen, deren
+              Ursachen, Symptome und Verlauf. Daher blieben die
+              Behandlungsmöglichkeiten in diesen frühen Anstalten eingeschränkt.
+              Zu den gängigen Methoden zählten vor allem Ruhigstellung,
+              Zwangsmaßnahmen und die sogenannte Arbeitstherapie.
+            </p>
+          </div>
+        </details>
+
+        <!-- Accordion: Wegbeschreibung (only in German) -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wegbeschreibung</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <p>
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+              aut fugit, sed quia consequuntur magni dolores eos qui ratione
+              voluptatem sequi nesciunt.
+            </p>
+            <p>
+              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+              consectetur, adipisci velit, sed quia non numquam eius modi
+              tempora incidunt ut labore et dolore magnam aliquam quaerat
+              voluptatem.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <!-- English Version -->
+      <div data-lang="en" lang="en" aria-hidden="true">
+        <h1 class="station-title">Station 12: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-en">
+          <span id="audio-label-en" class="audio-label">Audio Guide</span>
+          <audio controls aria-describedby="audio-label-en" preload="metadata">
+            <source src="audio/station12-en.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wall Text -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wall Text</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>Chapter 3: Illness and Society</h3>
+            <p>
+              Society’s treatment of people with mental illnesses has changed
+              many times since the late 18th century. For years, they were
+              housed rather than helped, or lived on the margins of society.
+              Under the Nazi regime, people with disabilities or mental
+              illnesses were denied the right to live. At other times,
+              compassion, respect and understanding enabled progress in care and
+              treatment.
+            </p>
+            <p>
+              Since the psychiatric reforms of the 1970s, laws governing the
+              placement and care of patients have improved greatly. There is a
+              clear societal will to promote inclusion and reduce stigma.
+            </p>
+            <h3>Founding institutions</h3>
+            <p>
+              Until the late 18th century, people with mental illnesses were
+              mostly housed in church-run or municipal poorhouses. Some received
+              inadequate care and endured miserable conditions in prison-like
+              institutions alongside offenders, vagrants, or people considered
+              “immoral”.
+            </p>
+            <p>
+              Later, dedicated institutions for people with mental illnesses
+              were built. Attractive and architecturally ambitious, they
+              represented real progress. But there was still little
+              understanding of the causes, symptoms or course of these
+              illnesses. As a result, treatment options in these early
+              institutions remained limited. Common methods included restraint,
+              coercive measures, and the so-called work therapy.
+            </p>
+          </div>
+        </details>
+
+        <!-- No "Wegbeschreibung" in English version -->
+      </div>
+    </main>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

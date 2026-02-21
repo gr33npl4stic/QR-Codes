@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Station 20: Lorem Ipsum Dolor – Interaktiver Ausstellungsführer mit Audioguide, Wandtext und Wegbeschreibung. Verfügbar auf Deutsch und Englisch."
+    />
+    <title>Station 20: Lorem Ipsum Dolor - Ausstellungsführer</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <!-- Theme Toggle -->
+    <button
+      class="theme-toggle"
+      id="theme-toggle"
+      aria-label="Theme umschalten"
+    >
+      <span class="theme-icon"></span>
+    </button>
+
+    <!-- Language Toggle -->
+    <div class="language-toggle" role="group" aria-label="Sprachwahl">
+      <button
+        class="lang-btn active"
+        id="btn-de"
+        aria-pressed="true"
+        aria-label="Deutsch auswählen"
+      >
+        DE
+      </button>
+      <button
+        class="lang-btn"
+        id="btn-en"
+        aria-pressed="false"
+        aria-label="Switch to English"
+      >
+        EN
+      </button>
+    </div>
+
+    <div id="lang-announce" class="sr-only" aria-live="polite"></div>
+
+    <main class="container" id="main-content">
+      <!-- German Version -->
+      <div data-lang="de" lang="de" class="active-lang">
+        <h1 class="station-title">Station 20: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-de">
+          <span id="audio-label-de" class="audio-label">Audioguide</span>
+          <audio controls aria-describedby="audio-label-de" preload="metadata">
+            <source src="audio/station20-de.mp3" type="audio/mpeg" />
+            Ihr Browser unterstützt das Audio-Element nicht.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wandtext -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wandtext</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>Behandlungsversuche</h3>
+            <p>
+              Seit der Antike suchen Menschen nach Wegen, psychische Krankheiten
+              zu behandeln. Sie nutzten stets das Wissen ihrer Zeit und testeten
+              die zur Verfügung stehenden Mittel auf ihre Heilkraft. Schon in
+              der Antike setzten die Ärzte auf Wasserbehandlungen, kleine
+              Operationen oder Blutabnahmen. Viel später spielte auch die
+              Elektrizität eine wesentliche Rolle in der Behandlung.
+            </p>
+            <p>
+              Viele dieser historischen Methoden erscheinen uns heute brutal und
+              wirkungslos. Gegenwärtig setzt die Psychiatrie weitgehend auf eine
+              Kombination aus Medikamenten und verschiedenen Formen der
+              Psychotherapie, die den Patientinnen und Patienten nachweislich
+              helfen.
+            </p>
+            <h3>Medikamente für die Psyche</h3>
+            <p>
+              Ab dem späten 19. Jahrhundert, besonders aber in der zweiten
+              Hälfte des 20. Jahrhunderts führten Entdeckungen in der
+              Arzneimittelforschung zur Entwicklung neuer Psychopharmaka. Das
+              sind Medikamente, die Stoffwechselvorgänge im Gehirn beeinflussen
+              und sich in weiterer Folge auf die psychische Verfassung
+              auswirken. Sie eröffneten neue Wege in der Behandlung psychischer
+              Erkrankungen: Viele Betroffene müssen heute nicht mehr dauerhaft
+              in Kliniken leben, sondern können dank Medikamenten ihren Alltag
+              zu Hause bewältigen. Gleichzeitig bleiben Fragen zur richtigen
+              Dosierung, zur Wirksamkeit bei einzelnen Personen und zu möglichen
+              Nebenwirkungen wichtige Herausforderungen in der Psychiatrie.
+            </p>
+          </div>
+        </details>
+
+        <!-- Accordion: Wegbeschreibung (only in German) -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wegbeschreibung</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <p>
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+              aut fugit, sed quia consequuntur magni dolores eos qui ratione
+              voluptatem sequi nesciunt.
+            </p>
+            <p>
+              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+              consectetur, adipisci velit, sed quia non numquam eius modi
+              tempora incidunt ut labore et dolore magnam aliquam quaerat
+              voluptatem.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <!-- English Version -->
+      <div data-lang="en" lang="en" aria-hidden="true">
+        <h1 class="station-title">Station 20: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-en">
+          <span id="audio-label-en" class="audio-label">Audio Guide</span>
+          <audio controls aria-describedby="audio-label-en" preload="metadata">
+            <source src="audio/station20-en.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wall Text -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wall Text</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>Attempts at treatment</h3>
+            <p>
+              Since antiquity, people have sought ways to treat mental illness.
+              They applied contemporary knowledge and tested whatever remedies
+              were available for their healing power. Ancient physicians used
+              water therapies, minor surgical procedures and bloodletting. Much
+              later, electricity also became an important part of treatment.
+            </p>
+            <p>
+              Many of these historical methods appear brutal and ineffective
+              from today’s perspective. Modern psychiatry, by contrast, relies
+              largely on a combination of medication and various forms of
+              psychotherapy – approaches that have been shown to support
+              patients effectively.
+            </p>
+            <h3>Medication for the psyche</h3>
+            <p>
+              From the late 19th century onwards, and especially in the second
+              half of the 20th century, advances in pharmaceutical research led
+              to the development of new psychotropic drugs. These medications
+              influence metabolic processes in the brain, potentially affecting
+              the mental state. They opened up new paths in treatment: many
+              people today no longer need to live permanently in clinics, but
+              can manage their everyday lives at home with the help of
+              medication. At the same time, questions of dosage, individual
+              effectiveness and possible side effects remain major challenges in
+              psychiatry.
+            </p>
+          </div>
+        </details>
+
+        <!-- No "Wegbeschreibung" in English version -->
+      </div>
+    </main>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

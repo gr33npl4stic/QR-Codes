@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Station 16: Lorem Ipsum Dolor – Interaktiver Ausstellungsführer mit Audioguide, Wandtext und Wegbeschreibung. Verfügbar auf Deutsch und Englisch."
+    />
+    <title>Station 16: Lorem Ipsum Dolor - Ausstellungsführer</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <!-- Theme Toggle -->
+    <button
+      class="theme-toggle"
+      id="theme-toggle"
+      aria-label="Theme umschalten"
+    >
+      <span class="theme-icon"></span>
+    </button>
+
+    <!-- Language Toggle -->
+    <div class="language-toggle" role="group" aria-label="Sprachwahl">
+      <button
+        class="lang-btn active"
+        id="btn-de"
+        aria-pressed="true"
+        aria-label="Deutsch auswählen"
+      >
+        DE
+      </button>
+      <button
+        class="lang-btn"
+        id="btn-en"
+        aria-pressed="false"
+        aria-label="Switch to English"
+      >
+        EN
+      </button>
+    </div>
+
+    <div id="lang-announce" class="sr-only" aria-live="polite"></div>
+
+    <main class="container" id="main-content">
+      <!-- German Version -->
+      <div data-lang="de" lang="de" class="active-lang">
+        <h1 class="station-title">Station 16: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-de">
+          <span id="audio-label-de" class="audio-label">Audioguide</span>
+          <audio controls aria-describedby="audio-label-de" preload="metadata">
+            <source src="audio/station16-de.mp3" type="audio/mpeg" />
+            Ihr Browser unterstützt das Audio-Element nicht.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wandtext -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wandtext</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>Erbgesundheit und Krankenmord</h3>
+            <p>
+              Die Eugenik verstand sich als Lehre vom menschlichen Erbgut. Durch
+              Anwendung ihrer Erkenntnisse in der Bevölkerungs- und
+              Gesundheitspolitik sollten gesunde Anlagen gefördert und schlechte
+              verhindert werden. Im Nationalsozialismus leistete die Eugenik als
+              Teil der „Rassenhygiene“ einer mörderischen Ideologie Vorschub:
+              „Minderwertige“ Erbanlagen wurden festgelegt und der „Lebenswert“
+              Kranker auch an den Pflegekosten gemessen. Menschen mit geistigen
+              oder körperlichen Behinderungen sowie mit psychischen Erkrankungen
+              galten als „lebensunwert“. Unter dem Deckmantel der „Euthanasie“ –
+              des „Gnadentodes“ – wurden sie systematisch ermordet. 2.848
+              Patientinnen und Patienten aus Mauer-Öhling kamen in Schloss
+              Hartheim, vor Ort oder in anderen „Heil- und Pflegeanstalten“ ums
+              Leben.
+            </p>
+          </div>
+        </details>
+
+        <!-- Accordion: Wegbeschreibung (only in German) -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wegbeschreibung</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <p>
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+              aut fugit, sed quia consequuntur magni dolores eos qui ratione
+              voluptatem sequi nesciunt.
+            </p>
+            <p>
+              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+              consectetur, adipisci velit, sed quia non numquam eius modi
+              tempora incidunt ut labore et dolore magnam aliquam quaerat
+              voluptatem.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <!-- English Version -->
+      <div data-lang="en" lang="en" aria-hidden="true">
+        <h1 class="station-title">Station 16: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-en">
+          <span id="audio-label-en" class="audio-label">Audio Guide</span>
+          <audio controls aria-describedby="audio-label-en" preload="metadata">
+            <source src="audio/station16-en.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wall Text -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wall Text</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>Eugenics and the murder of the sick</h3>
+            <p>
+              Eugenics presented itself as the study of human heredity. Its
+              principles were applied in population and health policy to promote
+              “desirable” traits and prevent those considered “undesirable”. In
+              the Nazi era, eugenics became part of “racial hygiene” and
+              supported a murderous ideology: “inferior” hereditary
+              characteristics were defined, and the “value of life” of the sick
+              was calculated on the basis of their care costs. People with
+              intellectual or physical disabilities, and those with mental
+              illnesses, were labelled “unworthy of life”. Under the guise of
+              “euthanasia”, so-called “mercy killing”, they were systematically
+              murdered. A total of 2,848 patients from Mauer-Öhling were killed
+              at Schloss Hartheim, in Mauer-Öhling itself, or in other
+              “sanatorium and care institutions”.
+            </p>
+          </div>
+        </details>
+
+        <!-- No "Wegbeschreibung" in English version -->
+      </div>
+    </main>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

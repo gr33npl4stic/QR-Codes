@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Station 2: Lorem Ipsum Dolor – Interaktiver Ausstellungsführer mit Audioguide, Wandtext und Wegbeschreibung. Verfügbar auf Deutsch und Englisch."
+    />
+    <title>Station 2: Lorem Ipsum Dolor - Ausstellungsführer</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <!-- Theme Toggle -->
+    <button
+      class="theme-toggle"
+      id="theme-toggle"
+      aria-label="Theme umschalten"
+    >
+      <span class="theme-icon"></span>
+    </button>
+
+    <!-- Language Toggle -->
+    <div class="language-toggle" role="group" aria-label="Sprachwahl">
+      <button
+        class="lang-btn active"
+        id="btn-de"
+        aria-pressed="true"
+        aria-label="Deutsch auswählen"
+      >
+        DE
+      </button>
+      <button
+        class="lang-btn"
+        id="btn-en"
+        aria-pressed="false"
+        aria-label="Switch to English"
+      >
+        EN
+      </button>
+    </div>
+
+    <div id="lang-announce" class="sr-only" aria-live="polite"></div>
+
+    <main class="container" id="main-content">
+      <!-- German Version -->
+      <div data-lang="de" lang="de" class="active-lang">
+        <h1 class="station-title">Station 2: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-de">
+          <span id="audio-label-de" class="audio-label">Audioguide</span>
+          <audio controls aria-describedby="audio-label-de" preload="metadata">
+            <source src="audio/station2-de.mp3" type="audio/mpeg" />
+            Ihr Browser unterstützt das Audio-Element nicht.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wandtext -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wandtext</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>Kapitel 1: Definition</h3>
+            <p>
+              Als Krankheit bezeichnet man einen Zustand, in dem körperliche
+              oder psychische Funktionen beeinträchtigt sind. Das führt bei den
+              Betroffenen zu einem verminderten Wohlbefinden oder zu Leid. Ob
+              ein Zustand als „gesund“ oder „krank“ bewertet wird, unterliegt
+              jedoch auch einem Wandel. Dabei spielen gesellschaftliche
+              Veränderungen, weltanschauliche oder religiöse Überzeugungen
+              ebenso eine Rolle wie der aktuelle Wissensstand über den Körper
+              und seine Funktionen. Nicht zuletzt geht es natürlich immer auch
+              um die eigene Einschätzung: Bin ich psychisch krank?
+            </p>
+            <p>
+              Heute wissen wir, dass sehr viele Menschen von psychischen
+              Erkrankungen betroffen sind. Und wir wissen, dass viele dieser
+              Krankheiten geheilt oder gelindert werden können. Den meisten
+              Betroffenen ist es durch professionelle Betreuung möglich, ein
+              glückliches Leben zu führen.
+            </p>
+            <h3>Ich und du</h3>
+            <p>
+              Porträts sollen das Wesen eines Menschen einfangen. Sie halten ihn
+              aber vor allem in jenem Augenblick fest, in dem sie entstehen.
+              Auch wenn die Darstellung zutrifft, ist sie demnach nur eine
+              Momentaufnahme. Und sie ist stark von der Sicht jener Person
+              geprägt, die das Porträt erstellt. Ein Künstler, eine Ärztin, eine
+              betroffene Person, ein Angehöriger haben unterschiedliche
+              Blickwinkel: Sie sehen die Person, die sie beschreiben, jeweils
+              anders. Die Aussage, die ein Porträt über den psychischen Zustand,
+              über Krankheit oder Gesundheit trifft, ist letztlich also nicht
+              umfassend gültig.
+            </p>
+          </div>
+        </details>
+
+        <!-- Accordion: Wegbeschreibung (only in German) -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wegbeschreibung</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <p>
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+              aut fugit, sed quia consequuntur magni dolores eos qui ratione
+              voluptatem sequi nesciunt.
+            </p>
+            <p>
+              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+              consectetur, adipisci velit, sed quia non numquam eius modi
+              tempora incidunt ut labore et dolore magnam aliquam quaerat
+              voluptatem.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <!-- English Version -->
+      <div data-lang="en" lang="en" aria-hidden="true">
+        <h1 class="station-title">Station 2: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-en">
+          <span id="audio-label-en" class="audio-label">Audio Guide</span>
+          <audio controls aria-describedby="audio-label-en" preload="metadata">
+            <source src="audio/station2-en.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wall Text -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wall Text</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>Chapter 1: Definition</h3>
+            <p>
+              “Illness” refers to a state in which physical or psychological
+              functions are impaired, reducing wellbeing or causing suffering.
+              But our idea of what counts as “healthy” or “ill” has changed over
+              time. Social shifts, ideological or religious beliefs, and
+              prevailing medical knowledge all shape these definitions. Another
+              factor is a person’s own judgment: am I mentally ill?
+            </p>
+            <p>
+              Today, we acknowledge that many people experience mental illness
+              and that many conditions can be treated or managed. With
+              professional support, most can lead fulfilling lives.
+            </p>
+            <h3>You and me</h3>
+            <p>
+              Portraits aim to capture a person’s essence, but above all they
+              fix them in the moment in which they were created. Even if the
+              likeness is accurate, it can only ever be a snapshot. What we see
+              is strongly shaped by the perspective of the person who makes the
+              portrait. An artist, a doctor, someone living with illness, a
+              relative … each sees the person they depict differently. No
+              portrait can ever tell the full story of a person’s mind, illness
+              or health.
+            </p>
+          </div>
+        </details>
+
+        <!-- No "Wegbeschreibung" in English version -->
+      </div>
+    </main>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

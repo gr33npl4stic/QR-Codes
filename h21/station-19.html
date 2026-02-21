@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Station 19: Lorem Ipsum Dolor – Interaktiver Ausstellungsführer mit Audioguide, Wandtext und Wegbeschreibung. Verfügbar auf Deutsch und Englisch."
+    />
+    <title>Station 19: Lorem Ipsum Dolor - Ausstellungsführer</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <!-- Theme Toggle -->
+    <button
+      class="theme-toggle"
+      id="theme-toggle"
+      aria-label="Theme umschalten"
+    >
+      <span class="theme-icon"></span>
+    </button>
+
+    <!-- Language Toggle -->
+    <div class="language-toggle" role="group" aria-label="Sprachwahl">
+      <button
+        class="lang-btn active"
+        id="btn-de"
+        aria-pressed="true"
+        aria-label="Deutsch auswählen"
+      >
+        DE
+      </button>
+      <button
+        class="lang-btn"
+        id="btn-en"
+        aria-pressed="false"
+        aria-label="Switch to English"
+      >
+        EN
+      </button>
+    </div>
+
+    <div id="lang-announce" class="sr-only" aria-live="polite"></div>
+
+    <main class="container" id="main-content">
+      <!-- German Version -->
+      <div data-lang="de" lang="de" class="active-lang">
+        <h1 class="station-title">Station 19: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-de">
+          <span id="audio-label-de" class="audio-label">Audioguide</span>
+          <audio controls aria-describedby="audio-label-de" preload="metadata">
+            <source src="audio/station19-de.mp3" type="audio/mpeg" />
+            Ihr Browser unterstützt das Audio-Element nicht.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wandtext -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wandtext</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>Kapitel 4: Therapie</h3>
+            <p>
+              Die Behandlung psychischer Krankheiten ist ein vielschichtiger
+              Prozess. Sie zielt darauf ab, zu heilen oder Symptome zu lindern,
+              um die Lebensqualität und das Wohlbefinden der Betroffenen zu
+              verbessern.
+            </p>
+            <p>
+              Im Lauf der Geschichte haben Therapien immer auf dem aktuellen
+              Stand der Medizin und auf der weltanschaulichen Ausrichtung der
+              Gesellschaft beruht. Blickt man auf historische Behandlungen
+              psychischer Erkrankungen zurück, wirken manche befremdlich, manche
+              grausam. Sie sind aber stets in Zusammenhang mit dem jeweiligen
+              medizinischen Wissen zu sehen.
+            </p>
+            <p>
+              Heute kommen unterschiedlichste Methoden zur Anwendung. Teils sind
+              sie seit Langem bewährt, teils handelt es sich um Mittel
+              modernster Medizin. Die aktuelle Therapie ist individuell auf die
+              betroffene Person abgestimmt. Sie besteht oft aus einer
+              Kombination von Medikamenten, Psychotherapien und Maßnahmen, die
+              die soziale und körperliche Gesundheit stärken.
+            </p>
+            <h3>Glaube als Therapie</h3>
+            <p>
+              Bevor es wirksame Behandlungsmethoden und Medikamente gegen
+              psychische Erkrankungen gab, blieben den Betroffenen oft nur der
+              Glaube, das Gebet und die Hoffnung auf Heilung. Auch nach dem
+              Aufkommen moderner Psychopharmaka spielt der persönliche Glaube
+              für viele eine wichtige Rolle, um Zuversicht zu bewahren und die
+              Hoffnung auf Genesung nicht zu verlieren. Manche Betroffene
+              greifen auch auf Angebote abseits der Wissenschaft zurück. Sie
+              versprechen Besserung, erweisen sich aber oft als Scharlatanerie:
+              Eine möglicherweise empfundene positive Wirkung auf die
+              Betroffenen entbehrt jeglicher Grundlage.
+            </p>
+          </div>
+        </details>
+
+        <!-- Accordion: Wegbeschreibung (only in German) -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wegbeschreibung</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <p>
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+              aut fugit, sed quia consequuntur magni dolores eos qui ratione
+              voluptatem sequi nesciunt.
+            </p>
+            <p>
+              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+              consectetur, adipisci velit, sed quia non numquam eius modi
+              tempora incidunt ut labore et dolore magnam aliquam quaerat
+              voluptatem.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <!-- English Version -->
+      <div data-lang="en" lang="en" aria-hidden="true">
+        <h1 class="station-title">Station 19: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-en">
+          <span id="audio-label-en" class="audio-label">Audio Guide</span>
+          <audio controls aria-describedby="audio-label-en" preload="metadata">
+            <source src="audio/station19-en.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wall Text -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wall Text</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>Chapter 4: Therapy</h3>
+            <p>
+              Treating mental illness is a multi-layered process. The aim is to
+              cure or ease symptoms and improve the wellbeing and quality of
+              life of those affected. Throughout history, therapies reflected
+              the medical knowledge of their time and the beliefs of society.
+              Many treatments seem strange or cruel today, yet they must be seen
+              in the context of what was known then.
+            </p>
+            <p>
+              Today, a wide range of methods are used. Some have long
+              traditions, while others stem from cutting-edge medicine. Current
+              treatment is tailored to the individual and often combines
+              medication, psychotherapy and measures that support social and
+              physical wellbeing.
+            </p>
+            <h3>Faith as therapy</h3>
+            <p>
+              Before effective treatments and medication for mental illnesses
+              were available, many had little to rely on beyond faith and
+              prayer. Even after the arrival of modern psychotropic drugs,
+              personal belief has continued to play an important role for many,
+              helping them remain confident and maintain hope of recovery. Some
+              also turn to practices outside scientific medicine. These may
+              promise improvement but often amount to little more than quackery,
+              with any perceived benefit lacking scientific evidence.
+            </p>
+          </div>
+        </details>
+
+        <!-- No "Wegbeschreibung" in English version -->
+      </div>
+    </main>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

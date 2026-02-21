@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Station 8: Lorem Ipsum Dolor – Interaktiver Ausstellungsführer mit Audioguide, Wandtext und Wegbeschreibung. Verfügbar auf Deutsch und Englisch."
+    />
+    <title>Station 8: Lorem Ipsum Dolor - Ausstellungsführer</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <!-- Theme Toggle -->
+    <button
+      class="theme-toggle"
+      id="theme-toggle"
+      aria-label="Theme umschalten"
+    >
+      <span class="theme-icon"></span>
+    </button>
+
+    <!-- Language Toggle -->
+    <div class="language-toggle" role="group" aria-label="Sprachwahl">
+      <button
+        class="lang-btn active"
+        id="btn-de"
+        aria-pressed="true"
+        aria-label="Deutsch auswählen"
+      >
+        DE
+      </button>
+      <button
+        class="lang-btn"
+        id="btn-en"
+        aria-pressed="false"
+        aria-label="Switch to English"
+      >
+        EN
+      </button>
+    </div>
+
+    <div id="lang-announce" class="sr-only" aria-live="polite"></div>
+
+    <main class="container" id="main-content">
+      <!-- German Version -->
+      <div data-lang="de" lang="de" class="active-lang">
+        <h1 class="station-title">Station 8: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-de">
+          <span id="audio-label-de" class="audio-label">Audioguide</span>
+          <audio controls aria-describedby="audio-label-de" preload="metadata">
+            <source src="audio/station8-de.mp3" type="audio/mpeg" />
+            Ihr Browser unterstützt das Audio-Element nicht.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wandtext -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wandtext</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>Kapitel 2: Diagnose</h3>
+            <p>
+              Das Wort „Diagnose“ stammt aus dem Griechischen und bedeutet
+              „Erkennung“, „Beurteilung“ oder „Urteil“. Medizinische Fachleute
+              stellen Diagnosen nach umfassenden Untersuchungen. Dabei fragen
+              sie nach Beschwerden und Symptomen, aber auch nach Ereignissen in
+              der Lebensgeschichte, die damit in Verbindung stehen könnten.
+              Manchmal kommen medizinische, psychologische und funktionelle
+              Tests zum Einsatz. Schließlich gilt es alle Informationen zu einem
+              Gesamtbild zusammenzufügen und eine Diagnose zu stellen.
+            </p>
+            <p>
+              Für Menschen, bei denen eine psychische Erkrankung diagnostiziert
+              wird, ist das nicht immer einfach: Wie sollen sie damit umgehen?
+              Für viele fühlt sich die Diagnose wie ein Urteil an. Sie
+              befürchten Ausgrenzung und Stigmatisierung. Doch oft bedeutet eine
+              Diagnose auch Erleichterung. Nach einer langen Leidensgeschichte
+              kann sie Klarheit schaffen und es möglich machen, eine positive
+              Zukunftsperspektive zu entwickeln.
+            </p>
+            <h3>Untersuchung und Integrität</h3>
+            <p>
+              Einen wesentlichen Teil der medizinischen Arbeit stellt die
+              Begegnung mit den Patientinnen und Patienten dar. In Gesprächen
+              und durch Untersuchungen sammeln Ärztinnen und Ärzte alle
+              wichtigen Informationen, die sie für eine Diagnose und Behandlung
+              brauchen. Dafür stellen sie Fragen – mündlich, schriftlich oder
+              mithilfe von Bildern.
+            </p>
+            <p>
+              Psychische Erkrankungen fordern Ärztinnen und Ärzte heraus, weil
+              sie nach Hinweisen suchen, die sich nicht immer offenkundig
+              zeigen. Patientinnen und Patienten wiederum kann es beanspruchen,
+              dass jene, die sie behandeln, dabei in sehr intime Lebensbereiche
+              vordringen.
+            </p>
+          </div>
+        </details>
+
+        <!-- Accordion: Wegbeschreibung (only in German) -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wegbeschreibung</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <p>
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+              aut fugit, sed quia consequuntur magni dolores eos qui ratione
+              voluptatem sequi nesciunt.
+            </p>
+            <p>
+              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+              consectetur, adipisci velit, sed quia non numquam eius modi
+              tempora incidunt ut labore et dolore magnam aliquam quaerat
+              voluptatem.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <!-- English Version -->
+      <div data-lang="en" lang="en" aria-hidden="true">
+        <h1 class="station-title">Station 8: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-en">
+          <span id="audio-label-en" class="audio-label">Audio Guide</span>
+          <audio controls aria-describedby="audio-label-en" preload="metadata">
+            <source src="audio/station8-en.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wall Text -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wall Text</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>Chapter 2: Diagnosis</h3>
+            <p>
+              The word “diagnosis” comes from Greek and means “recognition”,
+              “assessment” or “discernment”. Medical professionals arrive at a
+              diagnosis after careful examination. They ask about afflictions
+              and symptoms and about life events that might have caused them.
+              Sometimes they carry out medical, psychological or functional
+              tests. All this information is brought together to form an overall
+              picture.
+            </p>
+            <p>
+              Receiving a diagnosis of mental illness can be difficult. Many see
+              it as a judgement and fear exclusion or stigma. Yet it can also
+              bring relief. After a long period of uncertainty or suffering, it
+              can offer clarity and help open the way to a more hopeful future.
+            </p>
+            <h3>Examination and integrity</h3>
+            <p>
+              Meeting with patients is a central part of medical practice.
+              Through conversations and examinations, doctors gather the
+              information they need to make a diagnosis and plan treatment. This
+              involves asking questions: in person, in writing, or with the help
+              of images.
+            </p>
+            <p>
+              Mental illnesses pose a particular challenge, as their signs are
+              not always readily apparent. Patients, in turn, may find it
+              difficult when those treating them need to explore very intimate
+              areas of their lives.
+            </p>
+          </div>
+        </details>
+
+        <!-- No "Wegbeschreibung" in English version -->
+      </div>
+    </main>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

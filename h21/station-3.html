@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Station 3: Lorem Ipsum Dolor – Interaktiver Ausstellungsführer mit Audioguide, Wandtext und Wegbeschreibung. Verfügbar auf Deutsch und Englisch."
+    />
+    <title>Station 3: Lorem Ipsum Dolor - Ausstellungsführer</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <!-- Theme Toggle -->
+    <button
+      class="theme-toggle"
+      id="theme-toggle"
+      aria-label="Theme umschalten"
+    >
+      <span class="theme-icon"></span>
+    </button>
+
+    <!-- Language Toggle -->
+    <div class="language-toggle" role="group" aria-label="Sprachwahl">
+      <button
+        class="lang-btn active"
+        id="btn-de"
+        aria-pressed="true"
+        aria-label="Deutsch auswählen"
+      >
+        DE
+      </button>
+      <button
+        class="lang-btn"
+        id="btn-en"
+        aria-pressed="false"
+        aria-label="Switch to English"
+      >
+        EN
+      </button>
+    </div>
+
+    <div id="lang-announce" class="sr-only" aria-live="polite"></div>
+
+    <main class="container" id="main-content">
+      <!-- German Version -->
+      <div data-lang="de" lang="de" class="active-lang">
+        <h1 class="station-title">Station 3: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-de">
+          <span id="audio-label-de" class="audio-label">Audioguide</span>
+          <audio controls aria-describedby="audio-label-de" preload="metadata">
+            <source src="audio/station3-de.mp3" type="audio/mpeg" />
+            Ihr Browser unterstützt das Audio-Element nicht.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wandtext -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wandtext</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>Einordnungen</h3>
+            <p>
+              Wie psychische Erkrankungen oder Ausnahmezustände bewertet werden,
+              hängt von vielen Faktoren ab. Eine wesentliche Rolle spielen seit
+              jeher die Zeit, der Ort und die Situation. Je nach Weltanschauung,
+              Religion und Wissensstand wurde ein psychischer Ausnahmezustand
+              unterschiedlich wahrgenommen: von den einen als Erleuchtung und
+              Nähe zu Gott, von den anderen als Besessenheit und Gottesferne.
+            </p>
+            <p>
+              In moderner Zeit verloren religiöse Deutungen an Gewicht. An ihre
+              Stelle traten andere Erklärungen. Im Fall der „Hysterie“ zum
+              Beispiel waren sie sexistisch: Deren Ursprung sah man zunächst in
+              der Gebärmutter – demnach konnten auch ausschließlich Frauen davon
+              betroffen sein. Die „Beatlemania“ genannte Euphorie von Musikfans
+              wiederum stuften oft konservative Musik- und Kulturkritiker als
+              krankhaft ein.
+            </p>
+            <h3>Leid und Schmerz</h3>
+            <p>
+              Eine psychische Erkrankung ist meist eine schmerzhafte Erfahrung.
+              Sie bringt zahlreiche Einschränkungen und Belastungen mit sich. Am
+              stärksten wirkt der Leidensdruck. Er betrifft die erkrankte Person
+              selbst, aber auch ihr soziales Umfeld.
+            </p>
+            <p>
+              wenigen stellt sich die Frage nach dem Warum. Die Antwort darauf
+              fällt – je nach Zeit und Gesellschaft – unterschiedlich aus.
+              Bisweilen wurde und wird dem Leiden als solchem eine moralische,
+              politische oder religiöse Bedeutung beigemessen. Seit den Anfängen
+              der modernen Medizin wird außerdem unternommen, Schmerz zu
+              definieren und zu messen.
+            </p>
+          </div>
+        </details>
+
+        <!-- Accordion: Wegbeschreibung (only in German) -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wegbeschreibung</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <p>
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+              aut fugit, sed quia consequuntur magni dolores eos qui ratione
+              voluptatem sequi nesciunt.
+            </p>
+            <p>
+              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+              consectetur, adipisci velit, sed quia non numquam eius modi
+              tempora incidunt ut labore et dolore magnam aliquam quaerat
+              voluptatem.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <!-- English Version -->
+      <div data-lang="en" lang="en" aria-hidden="true">
+        <h1 class="station-title">Station 3: Lorem Ipsum Dolor</h1>
+
+        <!-- Audio Guide -->
+        <section class="audio-section" aria-labelledby="audio-label-en">
+          <span id="audio-label-en" class="audio-label">Audio Guide</span>
+          <audio controls aria-describedby="audio-label-en" preload="metadata">
+            <source src="audio/station3-en.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </section>
+
+        <!-- Accordion: Wall Text -->
+        <details class="accordion-item">
+          <summary class="accordion-button">
+            <h2>Wall Text</h2>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </summary>
+          <div class="accordion-content">
+            <h3>Classifications</h3>
+            <p>
+              How people judge mental illnesses or altered mental states has
+              always depended on many factors. Time, place and circumstance all
+              shape how they are understood. Depending on worldview, religion
+              and the knowledge available, an altered state of mind could be
+              interpreted in very different ways. For some, it signified
+              enlightenment or closeness to God; for others, it was seen as
+              possession or a sign of being cut off from the divine.
+            </p>
+            <p>
+              As religious explanations lost influence, new ones emerged. In the
+              case of “hysteria”, they were openly sexist: the condition was
+              initially linked to the womb and assumed to affect only women.
+              Meanwhile, the euphoric excitement called “Beatlemania” was
+              dismissed as pathological by conservative cultural and music
+              critics.
+            </p>
+            <h3>Pain and suffering</h3>
+            <p>
+              Mental illness is usually a painful experience. With it come many
+              limitations and burdens, but the greatest strain comes from the
+              suffering itself – affecting both the patient and their social
+              environment.
+            </p>
+            <p>
+              Many people ask themselves why. The answer varies depending on
+              time and society. At times, suffering has been imbued with moral,
+              political or religious meaning. Since the early days of modern
+              medicine, there have been efforts to define and measure pain.
+            </p>
+          </div>
+        </details>
+
+        <!-- No "Wegbeschreibung" in English version -->
+      </div>
+    </main>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>
