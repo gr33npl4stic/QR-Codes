@@ -107,8 +107,8 @@ body {
 }
 
 .skip-link {
-  position: absolute;
-  top: -40px;
+  position: fixed;
+  top: -100px;
   left: 0;
   background: var(--accent-primary);
   color: var(--bg-primary);
@@ -122,13 +122,27 @@ body {
 }
 
 /* ==========================================================================
+   Site Header
+   ========================================================================== */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--bg-secondary);
+  z-index: 10;
+}
+
+/* ==========================================================================
    Theme Toggle
    ========================================================================== */
 
 .theme-toggle {
-  position: fixed;
-  top: var(--spacing-sm);
-  left: var(--spacing-sm);
   min-width: var(--min-touch-target);
   min-height: var(--min-touch-target);
   padding: var(--spacing-xs) var(--spacing-sm);
@@ -139,7 +153,6 @@ body {
   font-size: 2rem;
   transition: all var(--transition-base);
   border-radius: 4px;
-  z-index: 10;
 }
 
 .theme-toggle:hover {
@@ -175,12 +188,8 @@ body {
    ========================================================================== */
 
 .language-toggle {
-  position: fixed;
-  top: var(--spacing-sm);
-  right: var(--spacing-sm);
   display: flex;
   gap: var(--spacing-xs);
-  z-index: 10;
 }
 
 .lang-btn {
@@ -218,7 +227,7 @@ body {
 .container {
   max-width: 100%;
   margin: 0 auto;
-  padding: 120px 0 40px;
+  padding: 7rem 0 40px;
 }
 
 /* ==========================================================================
@@ -341,7 +350,7 @@ details[open] .accordion-button {
 .accordion-content h3 {
   font-size: 2rem;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.2;
   letter-spacing: 0.01em;
   margin-bottom: var(--spacing-sm);
   color: var(--text-primary);
@@ -369,18 +378,8 @@ details[open] .accordion-button {
     font-size: var(--font-size-xl);
   }
 
-  .language-toggle {
-    top: var(--spacing-xs);
-    right: var(--spacing-xs);
-  }
-
-  .theme-toggle {
-    top: var(--spacing-xs);
-    left: var(--spacing-xs);
-  }
-
   .container {
-    padding-top: 90px;
+    padding-top: 7rem;
   }
 }
 
