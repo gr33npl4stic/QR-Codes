@@ -260,9 +260,9 @@ body {
 }
 
 /* TEST: English title in hotpink for easier distinction */
-[data-lang="en"] .station-title {
-  color: hotpink;
-}
+/* [data-lang="en"] .station-title {
+  color: hotpink; */
+/* } */
 
 /* ==========================================================================
    Audio Section
