@@ -52,11 +52,14 @@ document.addEventListener('DOMContentLoaded', function() {
         updateThemeLabel();
     }
     
-    // Set initial language
-    switchLanguage(savedLang);
-    
-    btnDe.addEventListener('click', () => switchLanguage('de'));
-    btnEn.addEventListener('click', () => switchLanguage('en'));
+    // Set initial language (only if language elements exist)
+    if (langDe && langEn && btnDe && btnEn) {
+        switchLanguage(savedLang);
+        btnDe.addEventListener('click', () => switchLanguage('de'));
+        btnEn.addEventListener('click', () => switchLanguage('en'));
+    } else {
+        updateThemeLabel();
+    }
     
     // Accordion functionality - only one open at a time
     function closeAllAccordions() {
