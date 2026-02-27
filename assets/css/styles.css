@@ -360,6 +360,12 @@ details[open] .accordion-button {
   margin-top: var(--spacing-lg);
 }
 
+.container > p {
+  padding: 0 var(--spacing-sm);
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
 .accordion-content p {
   margin-bottom: 1rem;
   color: var(--text-primary);
@@ -420,6 +426,10 @@ details[open] .accordion-button {
 
   .accordion-content {
     padding: var(--spacing-sm) var(--spacing-md) var(--spacing-md);
+  }
+
+  .container > p {
+    padding: 0;
   }
 
   .station-title {
