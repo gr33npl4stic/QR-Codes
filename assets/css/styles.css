@@ -360,6 +360,13 @@ details[open] .accordion-button {
   margin-top: var(--spacing-lg);
 }
 
+.metadata {
+  padding: 0 var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-base);
+  color: var(--text-tertiary);
+}
+
 .container > p {
   padding: 0 var(--spacing-sm);
   margin-bottom: 1rem;
