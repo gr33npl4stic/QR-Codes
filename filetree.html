@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR-Code Stationsübersicht</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f5f4f0;
+    color: #1a1a1a;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    min-height: 100vh;
+    padding: 48px 32px;
+  }
+
+  .wrap { max-width: 460px; }
+
+  .root {
+    color: #888;
+    margin-bottom: 18px;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+  }
+
+  details { margin-bottom: 2px; }
+
+  details > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 0;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 500;
+    user-select: none;
+  }
+
+  details > summary::-webkit-details-marker { display: none; }
+
+  .arrow {
+    color: #bbb;
+    font-size: 10px;
+    transition: transform 0.15s;
+    width: 12px;
+    display: inline-block;
+  }
+
+  details[open] > summary .arrow { transform: rotate(90deg); }
+
+  .folder-count {
+    margin-left: auto;
+    color: #aaa;
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .stations {
+    padding-left: 18px;
+    border-left: 1px solid #ddd;
+    margin: 2px 0 12px 6px;
+  }
+
+  .station {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 10px;
+  }
+
+  .station a {
+    color: #444;
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+  .station a:hover {
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .station.done a { color: #bbb; }
+  .station.done a:hover { color: #999; }
+
+  .check { font-size: 13px; color: #ccc; }
+  .check.done { color: #1a1a1a; }
+
+  .divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 24px 0;
+  }
+
+  .stats {
+    display: flex;
+    gap: 28px;
+    color: #888;
+    font-size: 13px;
+  }
+
+  .stats span b {
+    color: #1a1a1a;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="root">QR-Code/</div>
+  <div id="tree"></div>
+  <hr class="divider">
+  <div class="stats" id="stats"></div>
+</div>
+
+<script>
+const data = [
+  {
+    name: "h21",
+    stations: [
+      {id:1,done:true},{id:2,done:true},{id:3,done:true},{id:4,done:true},{id:5,done:true},
+      {id:6,done:true},{id:7,done:true},{id:8,done:true},{id:9,done:true},{id:10,done:true},
+      {id:11,done:true},{id:12,done:true},{id:13,done:true},{id:14,done:true},{id:15,done:true},
+      {id:16,done:true},{id:17,done:true},{id:18,done:true},{id:19,done:true},{id:20,done:true},
+      {id:21,done:true},{id:22,done:false},{id:23,done:false},{id:24,done:false},{id:25,done:false},
+      {id:26,done:false},{id:27,done:false},{id:28,done:true},{id:29,done:true},{id:30,done:true},
+      {id:31,done:true},{id:32,done:true},{id:33,done:true},{id:34,done:true},{id:35,done:false},
+      {id:36,done:false},{id:37,done:false},{id:38,done:false},{id:39,done:false},{id:40,done:false},
+    ]
+  },
+  { name: "h18", stations: Array.from({length:24},(_,i)=>({id:i+1,done:false})) },
+  { name: "rundgang", stations: Array.from({length:8},(_,i)=>({id:i+1,done:false})) }
+];
+
+const tree = document.getElementById('tree');
+let totalDone = 0, totalAll = 0;
+
+data.forEach(folder => {
+  const done = folder.stations.filter(s => s.done).length;
+  totalDone += done;
+  totalAll += folder.stations.length;
+
+  const details = document.createElement('details');
+  if (folder.name === 'h21') details.open = true;
+
+  details.innerHTML = `
+    <summary>
+      <span class="arrow">▶</span>
+      ${folder.name}/
+      <span class="folder-count">${done}/${folder.stations.length}</span>
+    </summary>
+    <div class="stations">
+      ${folder.stations.map(s => `
+        <div class="station ${s.done ? 'done' : ''}">
+          <a href="${folder.name}/station-${s.id}.html">station-${s.id}</a>
+          <span class="check ${s.done ? 'done' : ''}">${s.done ? '×' : '·'}</span>
+        </div>
+      `).join('')}
+    </div>
+  `;
+  tree.appendChild(details);
+});
+
+document.getElementById('stats').innerHTML =
+  `<span><b>${totalDone}</b> erledigt</span>` +
+  `<span><b>${totalAll - totalDone}</b> ausstehend</span>` +
+  `<span><b>${totalAll}</b> gesamt</span>`;
+</script>
+</body>
+</html>
