@@ -252,6 +252,7 @@ body {
 
 .station-title {
   font-size: var(--font-size-2xl);
+  font-weight: 700;
   margin-bottom: var(--spacing-lg);
   color: var(--text-primary);
   padding: 0 var(--spacing-sm);
@@ -295,6 +296,10 @@ audio {
 .accordion-item {
   background: var(--bg-primary);
   border-top: 1px solid var(--border-color);
+}
+
+.container > .accordion-item:first-of-type {
+  margin-top: var(--spacing-md);
 }
 
 .accordion-item:last-child {
@@ -365,6 +370,10 @@ details[open] .accordion-button {
   margin-bottom: var(--spacing-sm);
   font-size: var(--font-size-base);
   color: var(--text-tertiary);
+}
+
+.mb-lg {
+  margin-bottom: var(--spacing-lg) !important;
 }
 
 .container > p {

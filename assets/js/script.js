@@ -39,6 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('exhibition-lang', 'en');
         }
         
+        // Pause all audio players when switching language
+        document.querySelectorAll('audio').forEach(a => { a.pause(); });
+
         // Close all accordions when switching language
         closeAllAccordions();
 
