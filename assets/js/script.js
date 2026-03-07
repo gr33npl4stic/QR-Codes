@@ -117,6 +117,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Set initial theme label
     updateThemeLabel();
+
+    // Emotion buttons (station-40)
+    const emotionBtns = document.querySelectorAll('.emotion-btn');
+    if (emotionBtns.length > 0) {
+        const emotionAudio = document.getElementById('emotion-audio');
+
+        emotionBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const isActive = this.getAttribute('aria-pressed') === 'true';
+
+                // Reset all buttons
+                emotionBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
+                emotionAudio.pause();
+
+                if (!isActive) {
+                    emotionAudio.src = this.dataset.audio;
+                    emotionAudio.play();
+                    this.setAttribute('aria-pressed', 'true');
+                }
+            });
+        });
+
+        emotionAudio.addEventListener('ended', function() {
+            emotionBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
+        });
+    }
     
     // Detect system preference on first visit
     if (!localStorage.getItem('exhibition-theme')) {
