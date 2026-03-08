@@ -85,6 +85,45 @@
         text-decoration: underline;
         text-underline-offset: 3px;
       }
+
+      .card img {
+        cursor: zoom-in;
+        transition: opacity 0.15s;
+      }
+
+      .card img:hover {
+        opacity: 0.85;
+      }
+
+      .overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 100;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 16px;
+        cursor: zoom-out;
+      }
+
+      .overlay.active {
+        display: flex;
+      }
+
+      .overlay img {
+        width: min(80vw, 80vh);
+        height: min(80vw, 80vh);
+        display: block;
+        image-rendering: crisp-edges;
+      }
+
+      .overlay-label {
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+      }
     </style>
   </head>
   <body>
@@ -200,5 +239,31 @@
         <a href="h21/station-21.html">station-21</a>
       </div>
     </div>
+
+    <div class="overlay" id="overlay">
+      <img id="overlay-img" src="" alt="" />
+      <span class="overlay-label" id="overlay-label"></span>
+    </div>
+
+    <script>
+      const overlay = document.getElementById('overlay');
+      const overlayImg = document.getElementById('overlay-img');
+      const overlayLabel = document.getElementById('overlay-label');
+
+      document.querySelectorAll('.card img').forEach(img => {
+        img.addEventListener('click', () => {
+          overlayImg.src = img.src;
+          overlayImg.alt = img.alt;
+          overlayLabel.textContent = img.closest('.card').querySelector('h2').textContent;
+          overlay.classList.add('active');
+        });
+      });
+
+      overlay.addEventListener('click', () => overlay.classList.remove('active'));
+
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') overlay.classList.remove('active');
+      });
+    </script>
   </body>
 </html>
