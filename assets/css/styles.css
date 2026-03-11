@@ -28,6 +28,7 @@
 
   /* Typography */
   --font-family: -apple-system, Roboto, sans-serif;
+  --font-size-sm: 1.6rem;
   --font-size-base: 1.8rem;
   --font-size-lg: 2.2rem;
   --font-size-xl: 3rem;
@@ -295,6 +296,12 @@ body {
   margin-bottom: var(--spacing-sm);
   color: var(--text-secondary);
   font-size: var(--font-size-base);
+}
+
+.audio-label--desc {
+  font-weight: 400;
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
 }
 
 audio {
