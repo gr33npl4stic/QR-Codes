@@ -273,6 +273,12 @@ body {
   font-size: var(--font-size-lg);
 }
 
+.container > h2 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
 /* TEST: English title in hotpink for easier distinction */
 /* [data-lang="en"] .station-title {
   color: hotpink; */
@@ -408,6 +414,17 @@ details[open] .accordion-button {
 
 .accordion-content p:last-child {
   margin-bottom: 0;
+}
+
+.accordion-content ol {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordion-content ol li {
+  color: var(--text-primary);
 }
 
 /* ==========================================================================
