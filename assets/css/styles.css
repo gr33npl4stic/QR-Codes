@@ -390,6 +390,18 @@ details[open] .accordion-button {
   margin-top: var(--spacing-lg);
 }
 
+.accordion-content h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+.accordion-content ol + h4 {
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
 .metadata {
   padding: 0 var(--spacing-sm);
   margin-bottom: var(--spacing-sm);
